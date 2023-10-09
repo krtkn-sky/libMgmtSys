@@ -1,4 +1,4 @@
-# Library Inventory Management
+# Simple Library Inventory Management
 
 This C++ program simulates a library inventory management system. It allows you to perform the following actions:
 
