@@ -3,15 +3,15 @@ using namespace std;
 
 int main(){
 
-    int qty,choice;
-    //Quantity vars
-    int qRooms=0,qDosa=0,qPizza=0,qVadapav=0,qLime=0,qTea=0;
-    //Sold vars
-    int sRooms=0,sDosa=0,sPizza=0,sVadapav=0,sLime=0,sTea=0;
-    //Total price
-    int totalRooms=0,totalDosas=0,totalPizzas=0,totalVadapavs=0,totalLimes=0,totalTeas=0;
+    int qty, choice;
+    // Quantity vars
+    int qRooms = 0, qDosa = 0, qPizza = 0, qVadapav = 0, qLime = 0, qTea = 0;
+    // Sold vars
+    int sRooms = 0, sDosa = 0, sPizza = 0, sVadapav = 0, sLime = 0, sTea = 0;
+    // Total price
+    int totalRooms = 0, totalDosas = 0, totalPizzas = 0, totalVadapavs = 0, totalLimes = 0, totalTeas = 0;
 
-    //Available items
+    // Available items
 
     cout << "\n\t Quantity available ->";
     cout << "Rooms available -> ";
@@ -27,8 +27,9 @@ int main(){
     cout << "\n Quantity of Teas ->";
     cin >> qTea;
 
-    //Choose from menu
+    // Choose from menu
 
+    m:
     cout << "\n\t\t Please select from the menu -> ";
     cout << "\n\n1) Rooms";
     cout << "\n\n2) Dosas";
@@ -53,8 +54,8 @@ int main(){
                 cout << "\n\n\t\t" << qty << " room/rooms alloted.";
             } else {
                 cout << "No rooms available. Try again later.";
-                break;
             }
+            break;
 
         case 2:
             cout << "\n\n Enter Dosa quantity -> ";
@@ -65,8 +66,8 @@ int main(){
                 cout <<"\n\n\t\t"<<qty<<" dosas will be sent to your room.";
             } else {
                 cout << "No dosas in the kitchen. Check out our other dishes.";
-                break;
             }
+            break;
 
         case 3:
             cout << "\n\n Enter Pizza quantity -> ";
@@ -77,8 +78,8 @@ int main(){
                 cout <<"\n\n\t\t"<<qty<<" pizzas will be sent to your room.";
             } else {
                 cout << "No pizzas in the kitchen. Check out our other dishes.";
-                break;
             }
+            break;
         
         case 4:
             cout << "\n\n Enter Vadapav quantity -> ";
@@ -89,8 +90,8 @@ int main(){
                 cout <<"\n\n\t\t"<<qty<<" vadapavs will be sent to your room.";
             } else {
                 cout << "No vadapavs in the kitchen. Check out our other dishes.";
-                break;
             }
+            break;
 
         case 5:
             cout << "\n\n Enter Lime quantity -> ";
@@ -101,8 +102,8 @@ int main(){
                 cout <<"\n\n\t\t"<<qty<<" limes will be sent to your room.";
             } else {
                 cout << "No limes in the kitchen. Check out our other dishes.";
-                break;
             }
+            break;
         
         case 6:
             cout << "\n\n Enter Tea quantity -> ";
@@ -113,12 +114,12 @@ int main(){
                 cout <<"\n\n\t\t"<<qty<<" dosas will be sent to your room.";
             } else {
                 cout << "No teas in the kitchen. Check out our other dishes.";
-                break;
             }
+            break;
         
         case 7:
 
-            //Room info
+            // Room info
 
             cout << "\n\n\tWelcome to the more info section."<<endl;
             cout << "\n\n Number of rooms available -> " << qRooms;
@@ -126,7 +127,7 @@ int main(){
             cout << "\n\n Remaining rooms -> " << qRooms-sRooms;
             cout << "\n\n Total rooms sold for the day -> " << totalRooms;
 
-            //Food items info
+            // Food items info
             
             cout << "\n\n Number of dosas available -> " << qDosa;
             cout << "\n\n Number of dosas served -> " << sDosa;
@@ -137,7 +138,29 @@ int main(){
             cout << "\n\n Number of pizzas served -> " << sPizza;
             cout << "\n\n Remaining pizzas in kitchen -> " << qPizza-sPizza;
             cout << "\n\n Total pizzas served for the day -> " << totalPizzas;
+            
+            cout << "\n\n Number of vadapavs available -> " << qVadapav;
+            cout << "\n\n Number of vadapavs served -> " << sVadapav;
+            cout << "\n\n Remaining vadapavs in kitchen -> " << qVadapav-sVadapav;
+            cout << "\n\n Total vadapavs served for the day -> " << totalVadapavs;
 
+            cout << "\n\n Number of limes available -> " << qLime;
+            cout << "\n\n Number of limes served -> " << sLime;
+            cout << "\n\n Remaining limes in kitchen -> " << qLime-sLime;
+            cout << "\n\n Total limes served for the day -> " << totalLimes;
 
+            cout << "\n\n Number of teas available -> " << qTea;
+            cout << "\n\n Number of teas served -> " << sTea;
+            cout << "\n\n Remaining teas in kitchen -> " << qTea-sTea;
+            cout << "\n\n Total teas served for the day -> " << totalTeas;
+            break;
+
+        case 8:
+            exit(0);
+
+        default:
+            cout<<"\n Please select an option!";
+            break;
     }
+    goto m;
 }
